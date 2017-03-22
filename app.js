@@ -10,12 +10,12 @@ app.use(bodyParser.json())
 var conversation_id = "";
 var w_conversation = watson.conversation({
     url: 'https://gateway.watsonplatform.net/conversation/api',
-    username: process.env.CONVERSATION_USERNAME || 'username',
-    password: process.env.CONVERSATION_PASSWORD || 'password',
+    username: process.env.CONVERSATION_USERNAME || 'ce275acc-481f-4d17-ba3a-50816b09d7ff',
+    password: process.env.CONVERSATION_PASSWORD || 'igrGT0SegeXe',
     version: 'v1',
     version_date: '2016-07-11'
 });
-var workspace = process.env.WORKSPACE_ID || 'workspaceId';
+var workspace = process.env.WORKSPACE_ID || '8be28395-8206-4a78-b8b2-8928342de0a6';
 
 app.get('/webhook/', function (req, res) {
     if (req.query['hub.verify_token'] === 'tokenDeVerificacaoFacebook') {
@@ -100,9 +100,9 @@ function sendMessage(sender, text_) {
             console.log('Error: ', response.body.error);
         }
     });
-};
+}
 
-var token = "tokenFB";
+var token = "EAAMyn50WO6QBABrpvpwJQx08eDGItjvrgZBptfSlAAbsduxAspJj9fYpeI7Vvb0J8jRtZAcZAu0YI0E0ilmBdAhQltxdurUwCvKXca6QtnilZA7rxmcy2iE46B1PXPhVeg108Kv1BZC3ZBuit8YUvRPQiuXQ8V1fHcBUZCvOzIXrwZDZD";
 var host = (process.env.VCAP_APP_HOST || 'localhost');
 var port = (process.env.VCAP_APP_PORT || 3000);
 app.listen(port, host);
