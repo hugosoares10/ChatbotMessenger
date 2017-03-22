@@ -100,7 +100,7 @@ function sendMessage(sender, text_) {
             console.log('Error: ', response.body.error);
         }
     });
-}
+};
 
 var token = "EAAMyn50WO6QBABrpvpwJQx08eDGItjvrgZBptfSlAAbsduxAspJj9fYpeI7Vvb0J8jRtZAcZAu0YI0E0ilmBdAhQltxdurUwCvKXca6QtnilZA7rxmcy2iE46B1PXPhVeg108Kv1BZC3ZBuit8YUvRPQiuXQ8V1fHcBUZCvOzIXrwZDZD";
 var host = (process.env.VCAP_APP_HOST || 'localhost');
