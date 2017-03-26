@@ -15,7 +15,7 @@ var w_conversation = watson.conversation({
     version: 'v1',
     version_date: '2016-07-11'
 });
-var workspace = process.env.WORKSPACE_ID || '8be28395-8206-4a78-b8b2-8928342de0a6';
+var workspace = process.env.WORKSPACE_ID || '3348f713-cf28-4c6d-8f79-e6977c58b6e8';
 
 app.get('/webhook/', function (req, res) {
     if (req.query['hub.verify_token'] === 'tokenDeVerificacaoFacebook') {
